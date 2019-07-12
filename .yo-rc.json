@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.sigma"
+    },
+    "jhipsterVersion": "6.1.2",
+    "applicationType": "microservice",
+    "baseName": "logistica",
+    "packageName": "com.sigma",
+    "packageFolder": "com/sigma",
+    "serverPort": "8082",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZjZjNDY3ZTY5NjY1OWQ1OTE0NzMyZjQ2ZWRmNmVhYjU0ZTBmZTU2Yjg3MjU0NzI4M2UxZmJjYjhjYzJlMDZjNzI0ZGIwM2Q0N2Y5MzZiMzhjZmQ5NzljNzg2ZGRmOTQzY2RhOTkxZDJlZTkyYWY3MWJmNmJlZGNjNWFkZGRiYzA=",
+    "testFrameworks": [
+      "gatling",
+      "cucumber"
+    ],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
