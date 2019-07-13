@@ -1,0 +1,45 @@
+{
+    "name": "TipoSeguro",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "fechaCaudicidad",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "codigoTipoSeguro",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "monitorista",
+            "otherEntityRelationshipName": "tipoSeguro",
+            "relationshipName": "monitorista",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190713071343",
+    "entityTableName": "tipo_seguro",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "logistica",
+    "applications": "*",
+    "microserviceName": "logistica"
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Modelo",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "equipo",
+            "otherEntityRelationshipName": "modelo",
+            "relationshipName": "equipo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tipoEquipo",
+            "otherEntityRelationshipName": "modelo",
+            "relationshipName": "tipoEuipo",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "marca",
+            "otherEntityName": "marca",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713071339",
+    "entityTableName": "modelo",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "logistica",
+    "applications": "*",
+    "microserviceName": "logistica"
+}

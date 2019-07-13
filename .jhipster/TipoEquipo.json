@@ -1,0 +1,39 @@
+{
+    "name": "TipoEquipo",
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "codigo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "modelo",
+            "otherEntityRelationshipName": "tipoEuipo",
+            "relationshipName": "modelo"
+        }
+    ],
+    "changelogDate": "20190713071338",
+    "entityTableName": "tipo_equipo",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "logistica",
+    "applications": "*",
+    "microserviceName": "logistica"
+}

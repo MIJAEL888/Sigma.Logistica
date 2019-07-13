@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Monitorista.
+    -->
+    <changeSet id="20190713071342-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="laboratorio_id"
+                                 baseTableName="monitorista"
+                                 constraintName="fk_monitorista_laboratorio_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="laboratorio"/>
+
+        <addForeignKeyConstraint baseColumnNames="monitorista_id"
+                                 baseTableName="monitorista_tipo_seguro"
+                                 constraintName="fk_monitorista_tipo_seguro_monitorista_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="monitorista"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_seguro_id"
+                                 baseTableName="monitorista_tipo_seguro"
+                                 constraintName="fk_monitorista_tipo_seguro_tipo_seguro_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_seguro"/>
+        
+    </changeSet>
+</databaseChangeLog>

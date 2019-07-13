@@ -1,0 +1,89 @@
+{
+    "name": "Laboratorio",
+    "fields": [
+        {
+            "fieldName": "razonSocial",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "direccion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "ruc",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "acreditadoPor",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroAcreditacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rutaDocAcreditacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombreDocAcreditacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "documentoAcreditacion",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "vigenciaDesde",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "vigenciaHasta",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "telefono",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "correo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombreContacto",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fechaCreacion",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "monitorista",
+            "otherEntityRelationshipName": "laboratorio",
+            "relationshipName": "laboratorio"
+        }
+    ],
+    "changelogDate": "20190713071341",
+    "entityTableName": "laboratorio",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "logistica",
+    "applications": "*",
+    "microserviceName": "logistica"
+}

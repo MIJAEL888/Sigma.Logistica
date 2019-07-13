@@ -41,6 +41,19 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            createCache(cm, com.sigma.domain.Equipo.class.getName());
+            createCache(cm, com.sigma.domain.TipoEquipo.class.getName());
+            createCache(cm, com.sigma.domain.TipoEquipo.class.getName() + ".modelos");
+            createCache(cm, com.sigma.domain.Modelo.class.getName());
+            createCache(cm, com.sigma.domain.Modelo.class.getName() + ".equipos");
+            createCache(cm, com.sigma.domain.Marca.class.getName());
+            createCache(cm, com.sigma.domain.Marca.class.getName() + ".modelos");
+            createCache(cm, com.sigma.domain.Laboratorio.class.getName());
+            createCache(cm, com.sigma.domain.Laboratorio.class.getName() + ".laboratorios");
+            createCache(cm, com.sigma.domain.Monitorista.class.getName());
+            createCache(cm, com.sigma.domain.Monitorista.class.getName() + ".tipoSeguros");
+            createCache(cm, com.sigma.domain.TipoSeguro.class.getName());
+            createCache(cm, com.sigma.domain.TipoSeguro.class.getName() + ".monitoristas");
             // jhipster-needle-ehcache-add-entry
         };
     }

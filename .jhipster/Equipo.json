@@ -1,0 +1,83 @@
+{
+    "name": "Equipo",
+    "fields": [
+        {
+            "fieldName": "codigoEquipo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "serie",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "calibradoDesde",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "calibradoHasta",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "rutaDocCalibracion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nombreDocCalibracion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "documentoCalibracion",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "EstadoEquipo",
+            "fieldValues": "CALIBRADO,MANTENIMIENTO,BAJA"
+        },
+        {
+            "fieldName": "fechaCompra",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "observacion",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "comentario",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "test",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "modelo",
+            "otherEntityRelationshipName": "equipo",
+            "relationshipName": "modelo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190713071337",
+    "entityTableName": "equipo",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "logistica",
+    "applications": "*",
+    "microserviceName": "logistica"
+}
